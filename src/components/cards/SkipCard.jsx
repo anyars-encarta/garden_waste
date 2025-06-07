@@ -39,7 +39,7 @@ const SkipCard = (skip) => {
         <img
           src="/waste_container.png"
           alt="Skip Size"
-          className="w-20 h-20 object-cover rounded-full absolute top-7 left-7 transform -translate-x-1/2 -translate-y-1/2"
+          className="w-20 h-20 object-cover rounded-full absolute top-7 left-7 transform -translate-x-1/2 -translate-y-1/2 border border-yellow-500"
         />
       </div>
 
