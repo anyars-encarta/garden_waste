@@ -58,29 +58,63 @@ const SkipCard = (skip) => {
       <div className="flex items-center justify-between mb-4">
         <div>
           <p>
-            Transport Cost: <span>£{skip.skip.transport_cost || 0}</span>
+            Transport Cost:{" "}
+            <span className="text-blue-600">
+              £
+              {(skip.skip.transport_cost || 0).toLocaleString("en-GB", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}
+            </span>
           </p>
 
           <p>
-            Per Tonne Cost: <span>£{skip.skip.per_tonne_cost || 0}</span>
+            Per Tonne Cost:{" "}
+            <span className="text-blue-600">
+              £
+              {(skip.skip.per_tonne_cost || 0).toLocaleString("en-GB", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}
+            </span>
           </p>
 
           <p>
-            VAT: <span>£{skip.skip.vat}</span>
+            VAT:{" "}
+            <span className="text-blue-600">
+              £
+              {(skip.skip.vat || 0).toLocaleString("en-GB", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}
+            </span>
           </p>
         </div>
         <h2 className="text-3xl font-bold text-blue-600">
-          £{skip.skip.price_before_vat}
+          £
+          {(skip.skip.price_before_vat || 0).toLocaleString("en-GB", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          })}
         </h2>
       </div>
 
-      <button className="bg-gray-800 hover:bg-gray-600 transition-colors duration-300 ease-in-out text-white py-2 px-4 rounded-md mt-4 w-full cursor-pointer flex items-center gap-4 justify-center">
-        Select Skip
-        <img
-          src="/right_arrow.png"
-          alt="Skip Size"
-          className="w-6 h-6 object-cover"
-        />
+      <button
+        disabled={skip.skip.forbidden}
+        className="bg-gray-800 hover:bg-gray-600 transition-colors duration-300 ease-in-out text-white py-2 px-4 rounded-md mt-4 w-full cursor-pointer flex items-center gap-4 justify-center"
+      >
+        {!skip.skip.forbidden ? (
+          <>
+            Select Skip
+            <img
+              src="/right_arrow.png"
+              alt="Skip Size"
+              className="w-6 h-6 object-cover"
+            />
+          </>
+        ) : (
+          <span className="text-gray-500">Not Available</span>
+        )}
       </button>
     </div>
   );
