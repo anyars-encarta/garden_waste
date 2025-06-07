@@ -4,6 +4,7 @@ import Loader from "./Loader";
 
 const SelectSkip = () => {
   const [skips, setSkips] = useState(null);
+  const [activeSkipID, setActiveSkipID] = useState(null);
 
   useEffect(() => {
     fetch(
@@ -31,9 +32,18 @@ const SelectSkip = () => {
       </span>
 
       <div className="mt-10 flex justify-between gap-6 flex-wrap w-full">
-      {skips.map((skip, i) => (
-        <SkipCard skip={skip} key={i} />
-      ))}
+        {skips.map((skip) => {
+          const { id } = skip;
+          
+          return (
+            <SkipCard
+              skip={skip}
+              key={id}
+              active={activeSkipID === id}
+              onSelect={() => setActiveSkipID(id)}
+            />
+          );
+        })}
       </div>
     </div>
   );
