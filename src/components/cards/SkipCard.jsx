@@ -1,6 +1,4 @@
 const SkipCard = (skip) => {
-  console.log("The skip ID is", skip.skip.id);
-
   return (
     <div className="flex-1 border border-gray-500 p-4 rounded-lg bg-gray-900 min-w-[300px] hover:-translate-y-2 transition-transform duration-300 ease-in-out hover:border-yellow-500 cursor-pointer">
       <div className="relative w-full h-34 bg-gray-800 rounded-lg mt-1 border border-yellow-500 hover:border-blue-500">
