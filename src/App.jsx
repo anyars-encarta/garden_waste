@@ -1,7 +1,11 @@
+import SelectSkip from "./components/SelectSkip";
+
 const App = () => {
   return (
-    <div className="h-screen flex bg-gray-950 text-white">App</div>
-  )
-}
+    <div className="min-h-screen bg-gray-950 text-white flex items-center justify-center">
+      <SelectSkip />
+    </div>
+  );
+};
 
-export default App
+export default App;
