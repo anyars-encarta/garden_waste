@@ -70,7 +70,7 @@ const SkipCard = ({ skip, active, onSelect }) => {
         <div>
           <CostComponent name="Transport Cost" item={transport_cost} />
 
-          <CostComponent name="Per Tonne Cost" item={per_tonne_cost} />
+          <CostComponent name="Cost Per Tonne" item={per_tonne_cost} />
 
           <CostComponent name="VAT" item={vat} />
         </div>
