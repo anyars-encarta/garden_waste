@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
-import SkipCard from "./cards/SkipCard";
-import Loader from "./Loader";
-import SelectionDetail from "./SelectionDetail";
+import { useContext, useEffect, useState } from "react";
+import SkipCard from "../components/cards/SkipCard";
+import Loader from "../components/Loader";
+import SkipContext from "../../context/SkipContext";
 
 const SelectSkip = () => {
   const [skips, setSkips] = useState(null);
-  const [selectedSkip, setSelectedSkip] = useState(null);
-
-  const [activeSkipID, setActiveSkipID] = useState(null);
+  const { setSelectedSkip, activeSkipID, setActiveSkipID } = useContext(SkipContext);
 
   useEffect(() => {
     fetch(
@@ -51,8 +49,6 @@ const SelectSkip = () => {
           );
         })}
       </div>
-
-      {activeSkipID && <SelectionDetail skip={selectedSkip} />}
     </div>
   );
 };
