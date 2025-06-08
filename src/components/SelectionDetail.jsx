@@ -1,6 +1,5 @@
 const SelectionDetail = (skip) => {
-  console.log("This is the skip", skip);
-
+  const { size, hire_period_days, price_before_vat, vat } = skip.skip;
   return (
     <div className="sticky bottom-0 left-0 flex size-full flex-col">
       <section className="glassmorphism-gold flex h-[112px] w-full items-center justify-between gap-8 px-4 py-4 max-md:justify-center max-md:gap-5 md:px-12">
@@ -18,10 +17,10 @@ const SelectionDetail = (skip) => {
           <div className="flex items-center justify-between w-[50%] pl-4 max-md:w-3/4">
             <div>
               <h2 className="text-3xl sm:text-lg text-white">
-                {skip.skip.size} Yard Skip
+                {size} Yard Skip
               </h2>
               <p className="text-md text-gray-500">
-                {skip.skip.hire_period_days} days hire
+                {hire_period_days} days hire
               </p>
             </div>
 
@@ -29,7 +28,7 @@ const SelectionDetail = (skip) => {
               <h2 className="text-3xl sm:text-lg text-blue-600 font-bold">
                 £
                 {(
-                  skip.skip.price_before_vat + skip.skip.vat || 0
+                  price_before_vat + vat || 0
                 ).toLocaleString("en-GB", {
                   minimumFractionDigits: 2,
                   maximumFractionDigits: 2,
