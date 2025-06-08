@@ -1,14 +1,14 @@
-const DateComponent = (color) => {
+const DateComponent = ({ color }) => {
   return (
     <svg
-      className={`h-8 w-8 ${color} fill-current`}
+      className={`h-8 w-8 ${color}`}
       fill="currentColor"
       version="1.1"
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 610.398 610.398"
-      xml:space="preserve"
+      xmlSpace="preserve"
     >
       <g>
         <g>

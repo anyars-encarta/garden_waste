@@ -1,7 +1,7 @@
-const VehicleComponent = (color) => {
+const VehicleComponent = ({ color }) => {
   return (
     <svg
-      className={`h-8 w-8 ${color} fill-current`}
+      className={`h-8 w-8 ${color}`}
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1280.000000 708.000000"
