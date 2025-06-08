@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import SkipCard from "./cards/SkipCard";
 import Loader from "./Loader";
+import SelectionDetail from "./SelectionDetail";
 
 const SelectSkip = () => {
   const [skips, setSkips] = useState(null);
+  const [selectedSkip, setSelectedSkip] = useState(null);
+
   const [activeSkipID, setActiveSkipID] = useState(null);
 
   useEffect(() => {
@@ -40,11 +43,16 @@ const SelectSkip = () => {
               skip={skip}
               key={id}
               active={activeSkipID === id}
-              onSelect={() => setActiveSkipID(activeSkipID === id ? null : id)}
+              onSelect={() => {
+                setActiveSkipID(activeSkipID === id ? null : id);
+                setSelectedSkip(activeSkipID === id ? null : skip);
+              }}
             />
           );
         })}
       </div>
+
+      {activeSkipID && <SelectionDetail skip={selectedSkip} />}
     </div>
   );
 };
