@@ -7,7 +7,7 @@ const SelectSkip = ({ skips }) => {
     useContext(SkipContext);
 
   return (
-    <div className="min-h-screen w-[70%] md:w-[92%] lg:w-[84%] xl:w-[70%] flex flex-col items-center py-10 px-8">
+    <div className="min-h-screen w-[70%] md:w-[92%] lg:w-[70%] flex flex-col items-center py-10 px-8">
       <h1 className="text-xl font-bold text-blue-600 bg-gray-800 py-1 px-4 rounded-full text-center min-w-[320px]">
         Choose Your Perfect Skip Size
       </h1>
