@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import SkipCard from "./cards/SkipCard";
-import Loader from "./Loader";
+import { useContext, useEffect, useState } from "react";
+import SkipCard from "../components/cards/SkipCard";
+import Loader from "../components/Loader";
+import SkipContext from "../../context/SkipContext";
 
 const SelectSkip = () => {
   const [skips, setSkips] = useState(null);
-  const [activeSkipID, setActiveSkipID] = useState(null);
+  const { setSelectedSkip, activeSkipID, setActiveSkipID } = useContext(SkipContext);
 
   useEffect(() => {
     fetch(
@@ -40,7 +41,10 @@ const SelectSkip = () => {
               skip={skip}
               key={id}
               active={activeSkipID === id}
-              onSelect={() => setActiveSkipID(activeSkipID === id ? null : id)}
+              onSelect={() => {
+                setActiveSkipID(activeSkipID === id ? null : id);
+                setSelectedSkip(activeSkipID === id ? null : skip);
+              }}
             />
           );
         })}
