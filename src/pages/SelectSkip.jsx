@@ -1,10 +1,19 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import SkipCard from "../components/cards/SkipCard";
 import SkipContext from "../../context/SkipContext";
 
 const SelectSkip = ({ skips }) => {
   const { setSelectedSkip, activeSkipID, setActiveSkipID } =
     useContext(SkipContext);
+
+  useEffect(() => {
+    const storedSkip = localStorage.getItem("selectedSkip");
+    if (storedSkip) {
+      const parsedSkip = JSON.parse(storedSkip);
+      setSelectedSkip(parsedSkip);
+      setActiveSkipID(parsedSkip ? parsedSkip.id : null);
+    }
+  });
 
   return (
     <div className="min-h-screen w-[70%] md:w-[92%] lg:w-[70%] flex flex-col items-center py-10 px-8">
@@ -29,6 +38,10 @@ const SelectSkip = ({ skips }) => {
               onSelect={() => {
                 setActiveSkipID(activeSkipID === id ? null : id);
                 setSelectedSkip(activeSkipID === id ? null : skip);
+                localStorage.setItem(
+                  "selectedSkip",
+                  activeSkipID === id ? null : JSON.stringify(skip)
+                );
               }}
             />
           );
