@@ -14,14 +14,14 @@ const Progress = () => {
   } = useContext(SkipContext);
 
   return (
-    <div className="fixed left-[2%] flex flex-col items-start gap-4 text-white min-h-screen lg:min-w-[300px] mt-50">
+    <div className="fixed left-[2%] flex flex-col items-start gap-4 text-white min-h-screen lg:min-w-[300px] mt-40">
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.postCode({
             color: postcodeComplete ? "text-blue-600" : "text-white",
           })}
           <div
-            className={`w-[2px] h-[60px] ${
+            className={`w-[2px] h-[40px] ${
               wasteTypeComplete ? "bg-blue-600" : "bg-white"
             } mx-auto`}
           />
@@ -41,7 +41,7 @@ const Progress = () => {
             color: wasteTypeComplete ? "text-blue-600" : "text-white",
           })}
           <div
-            className={`w-[2px] h-[60px] ${
+            className={`w-[2px] h-[40px] ${
               selectSkipComplete ? "bg-blue-600" : "bg-white"
             } mx-auto`}
           />
@@ -61,7 +61,7 @@ const Progress = () => {
             color: selectSkipComplete ? "text-blue-600" : "text-white",
           })}
           <div
-            className={`w-[2px] h-[60px] ${
+            className={`w-[2px] h-[40px] ${
               permitCheckComplete ? "bg-blue-600" : "bg-white"
             } mx-auto`}
           />
@@ -81,7 +81,7 @@ const Progress = () => {
             color: permitCheckComplete ? "text-blue-600" : "text-white",
           })}
           <div
-            className={`w-[2px] h-[60px] ${
+            className={`w-[2px] h-[40px] ${
               chooseDateComplete ? "bg-blue-600" : "bg-white"
             } mx-auto`}
           />
@@ -101,7 +101,7 @@ const Progress = () => {
             color: chooseDateComplete ? "text-blue-600" : "text-white",
           })}
           <div
-            className={`w-[2px] h-[60px] ${
+            className={`w-[2px] h-[40px] ${
               paymentComplete ? "bg-blue-600" : "bg-white"
             } mx-auto`}
           />
