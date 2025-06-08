@@ -1,8 +1,10 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import SkipCard from "../components/cards/SkipCard";
 import SkipContext from "../../context/SkipContext";
+import Loader from "../components/Loader";
 
-const SelectSkip = ({ skips }) => {
+const SelectSkip = () => {
+  const [skips, setSkips] = useState(null);
   const { setSelectedSkip, activeSkipID, setActiveSkipID } =
     useContext(SkipContext);
 
@@ -15,6 +17,24 @@ const SelectSkip = ({ skips }) => {
       setActiveSkipID(parsedSkip ? parsedSkip.id : null);
     }
   }, [setSelectedSkip, setActiveSkipID]);
+
+  useEffect(() => {
+    fetch(
+      "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setSkips(data);
+      });
+  }, [setSkips]);
+
+  if (!skips) {
+    return (
+      <div className="h-screen w-full flex justify-center items-center">
+        <Loader />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen w-[70%] md:w-[92%] lg:w-[70%] flex flex-col items-center py-10 px-8">
