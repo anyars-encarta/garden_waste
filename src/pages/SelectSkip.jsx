@@ -1,25 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import SkipCard from "../components/cards/SkipCard";
-import Loader from "../components/Loader";
 import SkipContext from "../../context/SkipContext";
 
-const SelectSkip = () => {
-  const [skips, setSkips] = useState(null);
-  const { setSelectedSkip, activeSkipID, setActiveSkipID } = useContext(SkipContext);
-
-  useEffect(() => {
-    fetch(
-      "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setSkips(data);
-      });
-  }, []);
-
-  if (!skips) {
-    return <Loader />;
-  }
+const SelectSkip = ({ skips }) => {
+  const { setSelectedSkip, activeSkipID, setActiveSkipID } =
+    useContext(SkipContext);
 
   return (
     <div className="min-h-screen w-[70%] md:w-[92%] lg:w-[84%] xl:w-[70%] flex flex-col items-center py-10 px-8">
