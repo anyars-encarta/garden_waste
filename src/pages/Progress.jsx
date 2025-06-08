@@ -1,7 +1,8 @@
 import { useContext } from "react";
 
 import SkipContext from "../../context/SkipContext";
-import { ICONS } from "../../constants/Icons";
+import { ICONS } from "../constants/Icons";
+
 
 const Progress = () => {
   const {
