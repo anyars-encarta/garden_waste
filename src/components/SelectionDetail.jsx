@@ -8,7 +8,12 @@ const SelectionDetail = (skip) => {
   return (
     <div className="sticky bottom-0 left-0 flex size-full flex-col">
       <section className="glassmorphism-gold flex h-[112px] w-full items-center justify-between gap-8 px-4 py-4 max-md:justify-center max-md:gap-5 md:px-12">
-        <button className="bg-blue-600 hover:bg-blue-700 not-only:rounded-md text-white px-4 py-2 cursor-pointer">
+        <button
+          className="bg-blue-600 hover:bg-blue-700 not-only:rounded-md text-white px-4 py-2 cursor-pointer"
+          onClick={() => {
+            // Functionality to navigate to previous page
+          }}
+        >
           Back
         </button>
 
@@ -44,7 +49,10 @@ const SelectionDetail = (skip) => {
 
         <button
           className="bg-blue-600 hover:bg-blue-700 rounded-md text-white px-4 py-2 cursor-pointer"
-          onClick={() => setSelectSkipComplete(true)}
+          onClick={
+            () => setSelectSkipComplete(true)
+            // App then navigates to the next page
+          }
         >
           Next
         </button>

@@ -18,7 +18,7 @@ const App = () => {
       .then((data) => {
         setSkips(data);
       });
-  }, []);
+  }, [setSkips]);
 
   if (!skips) {
     return (
