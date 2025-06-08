@@ -7,10 +7,10 @@ const SkipContextProvider = ({ children }) => {
 
   const [postcodeComplete, setPostcodeComplete] = useState(true);
   const [wasteTypeComplete, setWasteTypeComplete] = useState(true);
-  const [selectSkipComplete, setSelectSkipComplete] = useState(true);
-  const [permitCheckComplete, setPermitCheckComplete] = useState(true);
-  const [chooseDateComplete, setChooseDateComplete] = useState(true);
-  const [paymentComplete, setPaymentComplete] = useState(true);
+  const [selectSkipComplete, setSelectSkipComplete] = useState(false);
+  const [permitCheckComplete, setPermitCheckComplete] = useState(false);
+  const [chooseDateComplete, setChooseDateComplete] = useState(false);
+  const [paymentComplete, setPaymentComplete] = useState(false);
 
   return (
     <SkipContext.Provider
