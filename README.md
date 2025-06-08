@@ -43,7 +43,7 @@
 
 ## 🛠 Development Structure <a name="structure"></a>
 1. The app starts with a single SelectSkip.jsx page which is rendered through the App.jsx.
-2. The progress is also in a separate Progress.jsx page also rendered through the app.jsx. The progress component is static and doesnt move during scrolling.
+2. The progress is in a separate Progress.jsx component, also rendered through the App.jsx. The progress component is static and doesnt move during scrolling.
 3. I fetched the data in the SelectSkip.jsx file, mapped through them, and rendered each Skip using a SkipCard.jsx component.
 4. I also added a Loader.jsx component to display when the data is being fetched.
 5. I created re-suable components (ButtonState.jsx, CostComponent.jsx, and PermissionComponent.jsx) to void unnecessary repetions.
