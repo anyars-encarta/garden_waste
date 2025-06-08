@@ -75,13 +75,17 @@ const SkipCard = ({ skip, active, onSelect }) => {
           <CostComponent name="VAT" item={vat} />
         </div>
 
-        <h2 className="text-3xl font-bold text-blue-600">
-          £
-          {(price_before_vat || 0).toLocaleString("en-GB", {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2,
-          })}
-        </h2>
+        <div className='flex flex-col items-end'>
+          <h2 className="text-3xl font-bold text-blue-600">
+            £
+            {(price_before_vat + vat || 0).toLocaleString("en-GB", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </h2>
+
+          <span className="text-sm text-gray-400">VAT inclusive</span>
+        </div>
       </div>
 
       <button
