@@ -14,7 +14,7 @@ const Progress = () => {
   } = useContext(SkipContext);
 
   return (
-    <div className="fixed left-[2%] flex flex-col items-start gap-4 text-white min-h-screen lg:min-w-[300px] mt-40">
+    <div className="fixed left-[2%] flex flex-col items-start gap-4 text-white min-h-screen lg:min-w-[300px] mt-30">
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.postCode({
