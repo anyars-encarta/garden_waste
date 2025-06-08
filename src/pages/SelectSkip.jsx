@@ -8,12 +8,13 @@ const SelectSkip = ({ skips }) => {
 
   useEffect(() => {
     const storedSkip = localStorage.getItem("selectedSkip");
+
     if (storedSkip) {
       const parsedSkip = JSON.parse(storedSkip);
       setSelectedSkip(parsedSkip);
       setActiveSkipID(parsedSkip ? parsedSkip.id : null);
     }
-  });
+  }, [setSelectedSkip, setActiveSkipID]);
 
   return (
     <div className="min-h-screen w-[70%] md:w-[92%] lg:w-[70%] flex flex-col items-center py-10 px-8">
