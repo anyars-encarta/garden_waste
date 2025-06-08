@@ -1,9 +1,19 @@
+import { useContext } from "react";
+import SkipContext from "../../context/SkipContext";
+
 const SelectionDetail = (skip) => {
+  const { setSelectSkipComplete } = useContext(SkipContext);
+
   const { size, hire_period_days, price_before_vat, vat } = skip.skip;
   return (
     <div className="sticky bottom-0 left-0 flex size-full flex-col">
       <section className="glassmorphism-gold flex h-[112px] w-full items-center justify-between gap-8 px-4 py-4 max-md:justify-center max-md:gap-5 md:px-12">
-        <button className="bg-blue-600 hover:bg-blue-700 not-only:rounded-md text-white px-4 py-2 cursor-pointer">
+        <button
+          className="bg-blue-600 hover:bg-blue-700 not-only:rounded-md text-white px-4 py-2 cursor-pointer"
+          onClick={() => {
+            // Functionality to navigate to previous page
+          }}
+        >
           Back
         </button>
 
@@ -27,9 +37,7 @@ const SelectionDetail = (skip) => {
             <div classname="flex flex-col items-end">
               <h2 className="text-3xl sm:text-lg text-blue-600 font-bold">
                 £
-                {(
-                  price_before_vat + vat || 0
-                ).toLocaleString("en-GB", {
+                {(price_before_vat + vat || 0).toLocaleString("en-GB", {
                   minimumFractionDigits: 2,
                   maximumFractionDigits: 2,
                 })}
@@ -39,7 +47,13 @@ const SelectionDetail = (skip) => {
           </div>
         </div>
 
-        <button className="bg-blue-600 hover:bg-blue-700 rounded-md text-white px-4 py-2 cursor-pointer">
+        <button
+          className="bg-blue-600 hover:bg-blue-700 rounded-md text-white px-4 py-2 cursor-pointer"
+          onClick={
+            () => setSelectSkipComplete(true)
+            // App then navigates to the next page
+          }
+        >
           Next
         </button>
       </section>
