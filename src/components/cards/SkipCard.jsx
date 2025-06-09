@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import ButtonState from "../ButtonState";
 import CostComponent from "../CostComponent";
 import PermissionComponent from "../PermissionComponent";
+import SkipContext from "../../../context/SkipContext";
 
 const SkipCard = ({ skip, active, onSelect }) => {
   const {
@@ -15,16 +17,18 @@ const SkipCard = ({ skip, active, onSelect }) => {
     forbidden,
   } = skip;
 
+  const { theme } = useContext(SkipContext);
+
   return (
     <div
-      className={`flex-1 border p-4 rounded-lg bg-gray-900 min-w-[300px] hover:-translate-y-2 transition-transform duration-300 ease-in-out hover:border-yellow-500 cursor-pointer ${
-        active ? "border-yellow-500" : "border-gray-500"
+      className={`flex-1 border p-4 rounded-lg ${theme === "dark" ? "bg-gray-900 hover:border-yellow-500" : "bg-yellow-100 hover:border-blue-500 shadow-lg"} min-w-[300px] hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer ${
+        active ? theme === "dark" ? "border-yellow-500" : "border-blue-500" : "border-gray-500"
       }`}
       onClick={onSelect}
     >
-      <div className="relative w-full h-34 bg-gray-800 rounded-lg mt-1 border border-yellow-500 hover:border-blue-500">
+      <div className={`relative w-full h-34 ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"} rounded-lg mt-1 border border-yellow-500 hover:border-blue-500`}>
         <div className="absolute top-4 right-2 flex flex-col items-end gap-8">
-          <div className=" bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
+          <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
             {size} Yards
           </div>
 
@@ -57,7 +61,7 @@ const SkipCard = ({ skip, active, onSelect }) => {
       </div>
 
       <div className="flex items-center justify-between mb-10">
-        <h2 className="text-xl font-semibold text-white mt-4 mb-2">
+        <h2 className={`text-xl font-semibold ${theme === "dark" ? "text-white" : "text-gray-800"} mt-4 mb-2`}>
           {size} Yard Skip
         </h2>
 

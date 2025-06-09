@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SkipContext from "../../context/SkipContext";
 
 const SkipContextProvider = ({ children }) => {
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem("theme") || "light"
+  );
   const [selectedSkip, setSelectedSkip] = useState(null);
   const [activeSkipID, setActiveSkipID] = useState(null);
 
@@ -12,6 +15,10 @@ const SkipContextProvider = ({ children }) => {
   const [chooseDateComplete, setChooseDateComplete] = useState(false);
   const [paymentComplete, setPaymentComplete] = useState(false);
 
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   return (
     <SkipContext.Provider
       value={{
@@ -19,6 +26,8 @@ const SkipContextProvider = ({ children }) => {
         setSelectedSkip,
         activeSkipID,
         setActiveSkipID,
+        theme,
+        setTheme,
         postcodeComplete,
         setPostcodeComplete,
         wasteTypeComplete,

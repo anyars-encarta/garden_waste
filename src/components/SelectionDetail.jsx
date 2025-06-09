@@ -2,7 +2,7 @@ import { useContext } from "react";
 import SkipContext from "../../context/SkipContext";
 
 const SelectionDetail = ({ skip }) => {
-  const { setSelectSkipComplete } = useContext(SkipContext);
+  const { setSelectSkipComplete, theme } = useContext(SkipContext);
 
   const { size, hire_period_days, price_before_vat, vat } = skip;
   return (
@@ -29,7 +29,7 @@ const SelectionDetail = ({ skip }) => {
               <h2 className="text-lg md:text-3xl text-white">
                 {size} Yard Skip
               </h2>
-              <p className="text-md text-gray-500">
+              <p className={`text-md ${theme === "dark" ? "text-gray-400" : "text-gray-700"}`}>
                 {hire_period_days} days hire
               </p>
             </div>
@@ -42,7 +42,7 @@ const SelectionDetail = ({ skip }) => {
                   maximumFractionDigits: 2,
                 })}
               </h2>
-              <p className="text-md text-gray-500">includes VAT</p>
+              <p className={`text-md ${theme === "dark" ? "text-gray-400" : "text-gray-700"}`}>includes VAT</p>
             </div>
           </div>
         </div>
