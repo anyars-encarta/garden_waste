@@ -13,7 +13,7 @@ const App = () => {
     <div className="min-h-screen">
       <div
         className={`min-h-screen ${
-          theme === "dark" ? "bg-gray-800" : "bg-gray-100"
+          theme === "dark" ? "bg-gray-950" : "bg-white"
         } text-white flex justify-center`}
       >
         <Progress />

@@ -51,8 +51,9 @@
 7. The colors of the icons as well as their captions change when a step is completed.
 8. I also created a SelectionDetail.jsx component which opens to display information about the selected skip. The same component also gives the user the opportunity to either move Next or Back. The component only renders when a skip is selected.
 9. I used both Local and Global states to manage the skips state as and when necessary.
-10. The page is mobile responsive.
-11. I tried my best to keep in mind clean, maintainable react code, responsiveness, and UI/UX improvements.
+10. I added a theme toggle above the progress indicator to switch between light and dark modes.
+11. The page is mobile responsive.
+12. I tried my best to keep in mind clean, maintainable react code, responsiveness, and UI/UX improvements.
 
 ## 🛠 Built With <a name="built-with"></a>
 1. React

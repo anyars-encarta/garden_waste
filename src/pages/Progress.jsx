@@ -31,17 +31,17 @@ const Progress = () => {
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.postCode({
-            color: postcodeComplete ? "text-blue-600" : "text-white",
+            color: postcodeComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
           })}
           <div
             className={`w-[2px] h-[40px] ${
-              wasteTypeComplete ? "bg-blue-600" : "bg-white"
+              wasteTypeComplete ? "bg-blue-600" : theme === "dark" ? "bg-white" : "bg-gray-500"
             } mx-auto`}
           />
         </div>
         <p
-          className={`-mt-18 hidden lg:block font-light ${
-            postcodeComplete ? "text-blue-600" : "text-white"
+          className={`-mt-13 hidden lg:block font-light ${
+            postcodeComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
           }`}
         >
           Postal Code
@@ -51,17 +51,17 @@ const Progress = () => {
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.waste({
-            color: wasteTypeComplete ? "text-blue-600" : "text-white",
+            color: wasteTypeComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
           })}
           <div
             className={`w-[2px] h-[40px] ${
-              selectSkipComplete ? "bg-blue-600" : "bg-white"
+              selectSkipComplete ? "bg-blue-600" : theme === "dark" ? "bg-white" : "bg-gray-500"
             } mx-auto`}
           />
         </div>
         <p
-          className={`-mt-18 hidden lg:block font-light ${
-            wasteTypeComplete ? "text-blue-600" : "text-white"
+          className={`-mt-13 hidden lg:block font-light ${
+            wasteTypeComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
           }`}
         >
           Waste Type
@@ -71,17 +71,17 @@ const Progress = () => {
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.vehicle({
-            color: selectSkipComplete ? "text-blue-600" : "text-white",
+            color: selectSkipComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
           })}
           <div
             className={`w-[2px] h-[40px] ${
-              permitCheckComplete ? "bg-blue-600" : "bg-white"
+              permitCheckComplete ? "bg-blue-600" : theme === "dark" ? "bg-white" : "bg-gray-500"
             } mx-auto`}
           />
         </div>
         <p
-          className={`-mt-18 hidden lg:block font-light ${
-            selectSkipComplete ? "text-blue-600" : "text-white"
+          className={`-mt-13 hidden lg:block font-light ${
+            selectSkipComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
           }`}
         >
           Select Skip
@@ -91,17 +91,17 @@ const Progress = () => {
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.permitCheck({
-            color: permitCheckComplete ? "text-blue-600" : "text-white",
+            color: permitCheckComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
           })}
           <div
             className={`w-[2px] h-[40px] ${
-              chooseDateComplete ? "bg-blue-600" : "bg-white"
+              chooseDateComplete ? "bg-blue-600" : theme === "dark" ? "bg-white" : "bg-gray-500"
             } mx-auto`}
           />
         </div>
         <p
-          className={`-mt-18 hidden lg:block font-light ${
-            permitCheckComplete ? "text-blue-600" : "text-white"
+          className={`-mt-13 hidden lg:block font-light ${
+            permitCheckComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
           }`}
         >
           Permit Check
@@ -111,17 +111,17 @@ const Progress = () => {
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.date({
-            color: chooseDateComplete ? "text-blue-600" : "text-white",
+            color: chooseDateComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
           })}
           <div
             className={`w-[2px] h-[40px] ${
-              paymentComplete ? "bg-blue-600" : "bg-white"
+              paymentComplete ? "bg-blue-600" : theme === "dark" ? "bg-white" : "bg-gray-500"
             } mx-auto`}
           />
         </div>
         <p
-          className={`-mt-18 hidden lg:block font-light ${
-            chooseDateComplete ? "text-blue-600" : "text-white"
+          className={`-mt-13 hidden lg:block font-light ${
+            chooseDateComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
           }`}
         >
           Choose Date
@@ -130,11 +130,11 @@ const Progress = () => {
 
       <div className="flex items-center justify-center gap-2">
         {ICONS.payment({
-          color: paymentComplete ? "text-blue-600" : "text-white",
+          color: paymentComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
         })}
         <p
           className={`hidden lg:block font-light ${
-            paymentComplete ? "text-blue-600" : "text-white"
+            paymentComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
           }`}
         >
           Make Payment
