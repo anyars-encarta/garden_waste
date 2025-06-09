@@ -3,6 +3,16 @@ import { useContext } from "react";
 import SkipContext from "../../context/SkipContext";
 import { ICONS } from "../constants/Icons";
 
+const getStepColor = (complete, theme) => {
+  if (complete) return "text-blue-600";
+  return theme === "dark" ? "text-white" : "text-gray-500";
+};
+
+const getLineColor = (complete, theme) => {
+  if (complete) return "bg-blue-600";
+  return theme === "dark" ? "bg-white" : "bg-gray-500";
+};
+
 const Progress = () => {
   const {
     theme,
@@ -31,18 +41,14 @@ const Progress = () => {
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.postCode({
-            color: postcodeComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
+            color: getStepColor(postcodeComplete, theme),
           })}
           <div
-            className={`w-[2px] h-[40px] ${
-              wasteTypeComplete ? "bg-blue-600" : theme === "dark" ? "bg-white" : "bg-gray-500"
-            } mx-auto`}
+            className={`w-[2px] h-[40px] ${getLineColor(wasteTypeComplete, theme)} mx-auto`}
           />
         </div>
         <p
-          className={`-mt-13 hidden lg:block font-light ${
-            postcodeComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
-          }`}
+          className={`-mt-13 hidden lg:block font-light ${getStepColor(postcodeComplete, theme)}`}
         >
           Postal Code
         </p>
@@ -51,18 +57,14 @@ const Progress = () => {
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.waste({
-            color: wasteTypeComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
+            color: getStepColor(wasteTypeComplete, theme),
           })}
           <div
-            className={`w-[2px] h-[40px] ${
-              selectSkipComplete ? "bg-blue-600" : theme === "dark" ? "bg-white" : "bg-gray-500"
-            } mx-auto`}
+            className={`w-[2px] h-[40px] ${getLineColor(selectSkipComplete, theme)} mx-auto`}
           />
         </div>
         <p
-          className={`-mt-13 hidden lg:block font-light ${
-            wasteTypeComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
-          }`}
+          className={`-mt-13 hidden lg:block font-light ${getStepColor(wasteTypeComplete, theme)}`}
         >
           Waste Type
         </p>
@@ -71,18 +73,14 @@ const Progress = () => {
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.vehicle({
-            color: selectSkipComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
+            color: getStepColor(selectSkipComplete, theme),
           })}
           <div
-            className={`w-[2px] h-[40px] ${
-              permitCheckComplete ? "bg-blue-600" : theme === "dark" ? "bg-white" : "bg-gray-500"
-            } mx-auto`}
+            className={`w-[2px] h-[40px] ${getLineColor(permitCheckComplete, theme)} mx-auto`}
           />
         </div>
         <p
-          className={`-mt-13 hidden lg:block font-light ${
-            selectSkipComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
-          }`}
+          className={`-mt-13 hidden lg:block font-light ${getStepColor(selectSkipComplete, theme)}`}
         >
           Select Skip
         </p>
@@ -91,18 +89,14 @@ const Progress = () => {
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.permitCheck({
-            color: permitCheckComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
+            color: getStepColor(permitCheckComplete, theme),
           })}
           <div
-            className={`w-[2px] h-[40px] ${
-              chooseDateComplete ? "bg-blue-600" : theme === "dark" ? "bg-white" : "bg-gray-500"
-            } mx-auto`}
+            className={`w-[2px] h-[40px] ${getLineColor(chooseDateComplete, theme)} mx-auto`}
           />
         </div>
         <p
-          className={`-mt-13 hidden lg:block font-light ${
-            permitCheckComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
-          }`}
+          className={`-mt-13 hidden lg:block font-light ${getStepColor(permitCheckComplete, theme)}`}
         >
           Permit Check
         </p>
@@ -111,18 +105,14 @@ const Progress = () => {
       <div className="flex items-center justify-center gap-2">
         <div className="flex flex-col items-center gap-2">
           {ICONS.date({
-            color: chooseDateComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
+            color: getStepColor(chooseDateComplete, theme),
           })}
           <div
-            className={`w-[2px] h-[40px] ${
-              paymentComplete ? "bg-blue-600" : theme === "dark" ? "bg-white" : "bg-gray-500"
-            } mx-auto`}
+            className={`w-[2px] h-[40px] ${getLineColor(paymentComplete, theme)} mx-auto`}
           />
         </div>
         <p
-          className={`-mt-13 hidden lg:block font-light ${
-            chooseDateComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
-          }`}
+          className={`-mt-13 hidden lg:block font-light ${getStepColor(chooseDateComplete, theme)}`}
         >
           Choose Date
         </p>
@@ -130,12 +120,10 @@ const Progress = () => {
 
       <div className="flex items-center justify-center gap-2">
         {ICONS.payment({
-          color: paymentComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500",
+          color: getStepColor(paymentComplete, theme),
         })}
         <p
-          className={`hidden lg:block font-light ${
-            paymentComplete ? "text-blue-600" : theme === "dark" ? "text-white" : "text-gray-500"
-          }`}
+          className={`hidden lg:block font-light ${getStepColor(paymentComplete, theme)}`}
         >
           Make Payment
         </p>
