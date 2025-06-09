@@ -4,7 +4,7 @@
 
  <!-- LOGO -->
 
-  <img src="./public/garden_waste.png" alt="logo" width="160"  height="auto" />
+  <img src="./public/garden_waste_light.png" alt="logo" width="160"  height="auto" />
   <br/>
 
 <!-- MAIN HEADING -->
