@@ -5,8 +5,10 @@ import Loader from "../components/Loader";
 
 const SelectSkip = () => {
   const [skips, setSkips] = useState(null);
-  const { setSelectedSkip, activeSkipID, setActiveSkipID } =
+  const { theme, setSelectedSkip, activeSkipID, setActiveSkipID } =
     useContext(SkipContext);
+
+  console.log("Theme changed:", theme);
 
   useEffect(() => {
     const storedSkip = localStorage.getItem("selectedSkip");
@@ -38,7 +40,11 @@ const SelectSkip = () => {
 
   return (
     <div className="min-h-screen w-[70%] md:w-[92%] lg:w-[70%] flex flex-col items-center py-10 px-8">
-      <h1 className="text-xl font-bold text-blue-600 bg-gray-800 py-1 px-4 rounded-full text-center min-w-[320px]">
+      <h1
+        className={`text-xl font-bold text-blue-600 ${
+          theme === "dark" ? "bg-gray-800" : "bg-gray-400"
+        }  py-1 px-4 rounded-full text-center min-w-[320px]`}
+      >
         Choose Your Perfect Skip Size
       </h1>
 

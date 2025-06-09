@@ -6,11 +6,16 @@ import SelectSkip from "./pages/SelectSkip";
 import Progress from "./pages/Progress";
 
 const App = () => {
+  const { theme } = useContext(SkipContext);
   const { selectedSkip, activeSkipID } = useContext(SkipContext);
 
   return (
     <div className="min-h-screen">
-      <div className="min-h-screen bg-gray-950 text-white flex justify-center">
+      <div
+        className={`min-h-screen ${
+          theme === "dark" ? "bg-gray-800" : "bg-gray-100"
+        } text-white flex justify-center`}
+      >
         <Progress />
         <SelectSkip />
       </div>
