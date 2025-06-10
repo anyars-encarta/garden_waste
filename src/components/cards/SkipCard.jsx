@@ -21,8 +21,8 @@ const SkipCard = ({ skip, active, onSelect }) => {
 
   return (
     <div
-      className={`flex-1 border p-4 rounded-lg border-4 ${theme === "dark" ? "bg-gray-900 hover:border-yellow-500" : "bg-yellow-100 hover:border-blue-500 shadow-lg"} min-w-[300px] hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer ${
-        active ? theme === "dark" ? "border-yellow-500" : "border-blue-500" : "border-gray-500"
+      className={`flex-1 border-4 p-4 rounded-lg ${theme === "dark" ? "bg-gray-900 hover:border-yellow-500" : "bg-yellow-100 hover:border-blue-500 shadow-lg"} min-w-[300px] hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer ${
+        active ? theme === "dark" ? "border-yellow-500 -translate-y-2" : "border-blue-500 -translate-y-2" : "border-gray-500"
       }`}
       onClick={onSelect}
     >
