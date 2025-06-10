@@ -8,8 +8,6 @@ const SelectSkip = () => {
   const { theme, setSelectedSkip, activeSkipID, setActiveSkipID } =
     useContext(SkipContext);
 
-  console.log("Theme changed:", theme);
-
   useEffect(() => {
     const storedSkip = localStorage.getItem("selectedSkip");
 
