@@ -21,12 +21,12 @@ const SkipCard = ({ skip, active, onSelect }) => {
 
   return (
     <div
-      className={`flex-1 border p-4 rounded-lg ${theme === "dark" ? "bg-gray-900 hover:border-yellow-500" : "bg-yellow-100 hover:border-blue-500 shadow-lg"} min-w-[300px] hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer ${
+      className={`flex-1 border p-4 rounded-lg border-4 ${theme === "dark" ? "bg-gray-900 hover:border-yellow-500" : "bg-yellow-100 hover:border-blue-500 shadow-lg"} min-w-[300px] hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer ${
         active ? theme === "dark" ? "border-yellow-500" : "border-blue-500" : "border-gray-500"
       }`}
       onClick={onSelect}
     >
-      <div className={`relative w-full h-34 ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"} rounded-lg mt-1 border border-yellow-500 hover:border-blue-500`}>
+      <div className={`relative w-full h-34 ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"} rounded-lg mt-1 border-4 border-yellow-500 hover:border-blue-500`}>
         <div className="absolute top-4 right-2 flex flex-col items-end gap-8">
           <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
             {size} Yards
@@ -56,7 +56,7 @@ const SkipCard = ({ skip, active, onSelect }) => {
         <img
           src="/waste_container.png"
           alt="Waste Container"
-          className="w-20 h-20 object-cover rounded-full absolute top-7 left-7 transform -translate-x-1/2 -translate-y-1/2 border border-yellow-500"
+          className="w-20 h-20 hover:w-60 hover:h-60 object-cover rounded-full absolute top-6 left-7 transform -translate-x-1/2 -translate-y-1/2 border-4 border-yellow-500"
         />
       </div>
 
