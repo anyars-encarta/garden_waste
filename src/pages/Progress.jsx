@@ -26,7 +26,7 @@ const Progress = () => {
   } = useContext(SkipContext);
 
   return (
-    <div className="fixed left-[2%] flex flex-col items-start gap-4 text-white min-h-screen lg:min-w-[300px] mt-30">
+    <div className="fixed left-[2%] flex flex-col items-start gap-4 text-white min-h-screen lg:min-w-[300px] mt-20">
       <img
         src={
           theme === "dark" ? "/src/assets/light.svg" : "/src/assets/dark.svg"
@@ -44,11 +44,17 @@ const Progress = () => {
             color: getStepColor(postcodeComplete, theme),
           })}
           <div
-            className={`w-[2px] h-[40px] ${getLineColor(wasteTypeComplete, theme)} mx-auto`}
+            className={`w-[2px] h-[40px] ${getLineColor(
+              wasteTypeComplete,
+              theme
+            )} mx-auto`}
           />
         </div>
         <p
-          className={`-mt-13 hidden lg:block font-light ${getStepColor(postcodeComplete, theme)}`}
+          className={`-mt-13 hidden lg:block font-light ${getStepColor(
+            postcodeComplete,
+            theme
+          )}`}
         >
           Postal Code
         </p>
@@ -60,11 +66,17 @@ const Progress = () => {
             color: getStepColor(wasteTypeComplete, theme),
           })}
           <div
-            className={`w-[2px] h-[40px] ${getLineColor(selectSkipComplete, theme)} mx-auto`}
+            className={`w-[2px] h-[40px] ${getLineColor(
+              selectSkipComplete,
+              theme
+            )} mx-auto`}
           />
         </div>
         <p
-          className={`-mt-13 hidden lg:block font-light ${getStepColor(wasteTypeComplete, theme)}`}
+          className={`-mt-13 hidden lg:block font-light ${getStepColor(
+            wasteTypeComplete,
+            theme
+          )}`}
         >
           Waste Type
         </p>
@@ -76,11 +88,17 @@ const Progress = () => {
             color: getStepColor(selectSkipComplete, theme),
           })}
           <div
-            className={`w-[2px] h-[40px] ${getLineColor(permitCheckComplete, theme)} mx-auto`}
+            className={`w-[2px] h-[40px] ${getLineColor(
+              permitCheckComplete,
+              theme
+            )} mx-auto`}
           />
         </div>
         <p
-          className={`-mt-13 hidden lg:block font-light ${getStepColor(selectSkipComplete, theme)}`}
+          className={`-mt-13 hidden lg:block font-light ${getStepColor(
+            selectSkipComplete,
+            theme
+          )}`}
         >
           Select Skip
         </p>
@@ -92,11 +110,17 @@ const Progress = () => {
             color: getStepColor(permitCheckComplete, theme),
           })}
           <div
-            className={`w-[2px] h-[40px] ${getLineColor(chooseDateComplete, theme)} mx-auto`}
+            className={`w-[2px] h-[40px] ${getLineColor(
+              chooseDateComplete,
+              theme
+            )} mx-auto`}
           />
         </div>
         <p
-          className={`-mt-13 hidden lg:block font-light ${getStepColor(permitCheckComplete, theme)}`}
+          className={`-mt-13 hidden lg:block font-light ${getStepColor(
+            permitCheckComplete,
+            theme
+          )}`}
         >
           Permit Check
         </p>
@@ -108,11 +132,17 @@ const Progress = () => {
             color: getStepColor(chooseDateComplete, theme),
           })}
           <div
-            className={`w-[2px] h-[40px] ${getLineColor(paymentComplete, theme)} mx-auto`}
+            className={`w-[2px] h-[40px] ${getLineColor(
+              paymentComplete,
+              theme
+            )} mx-auto`}
           />
         </div>
         <p
-          className={`-mt-13 hidden lg:block font-light ${getStepColor(chooseDateComplete, theme)}`}
+          className={`-mt-13 hidden lg:block font-light ${getStepColor(
+            chooseDateComplete,
+            theme
+          )}`}
         >
           Choose Date
         </p>
@@ -123,7 +153,10 @@ const Progress = () => {
           color: getStepColor(paymentComplete, theme),
         })}
         <p
-          className={`hidden lg:block font-light ${getStepColor(paymentComplete, theme)}`}
+          className={`hidden lg:block font-light ${getStepColor(
+            paymentComplete,
+            theme
+          )}`}
         >
           Make Payment
         </p>
