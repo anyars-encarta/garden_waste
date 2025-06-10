@@ -6,7 +6,7 @@ const PermissionComponent = ({ imgSrc, altText, text, bgColor }) => {
         alt={altText}
         className="w-4 h-4 object-cover rounded-full"
       />
-      <span className=" text-white  text-xs">{text}</span>
+      <span className="text-white text-xs">{text}</span>
     </div>
   );
 };
