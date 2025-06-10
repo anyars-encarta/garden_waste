@@ -6,8 +6,7 @@ import SelectSkip from "./pages/SelectSkip";
 import Progress from "./pages/Progress";
 
 const App = () => {
-  const { theme } = useContext(SkipContext);
-  const { selectedSkip, activeSkipID } = useContext(SkipContext);
+  const { theme, selectedSkip, activeSkipID } = useContext(SkipContext);
 
   return (
     <>
