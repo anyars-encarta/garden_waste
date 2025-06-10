@@ -53,7 +53,9 @@
 9. I used both Local and Global states to manage the skips state as and when necessary.
 10. I added a theme toggle above the progress indicator to switch between light and dark modes.
 11. The page is mobile responsive.
-12. I tried my best to keep in mind clean, maintainable react code, responsiveness, and UI/UX improvements.
+12. Hovering over cards tilt them upwards and they move down when the cursor leaves them.
+13. Selected Cards remain tilted upwards until they are deselcted.
+14. I tried my best to keep in mind clean, maintainable react code, responsiveness, and UI/UX improvements.
 
 ## 🛠 Built With <a name="built-with"></a>
 1. React
