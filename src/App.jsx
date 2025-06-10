@@ -10,7 +10,7 @@ const App = () => {
   const { selectedSkip, activeSkipID } = useContext(SkipContext);
 
   return (
-    <div className="min-h-screen">
+    <>
       <div
         className={`min-h-screen ${
           theme === "dark" ? "bg-gray-950" : "bg-white"
@@ -21,7 +21,7 @@ const App = () => {
       </div>
 
       {activeSkipID && <SelectionDetail skip={selectedSkip} />}
-    </div>
+    </>
   );
 };
 

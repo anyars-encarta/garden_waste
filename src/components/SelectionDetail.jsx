@@ -7,7 +7,7 @@ const SelectionDetail = ({ skip }) => {
   const { size, hire_period_days, price_before_vat, vat } = skip;
   return (
     <div className="sticky bottom-0 left-0 w-full flex flex-col">
-      <section className="glassmorphism-gold flex h-[112px] w-full mx-auto items-center justify-between gap-4 sm:gap-8 px-2 sm:px-4 md:px-12">
+      <div className="glassmorphism-gold flex h-[112px] w-full mx-auto items-center justify-between gap-4 sm:gap-8 px-2 sm:px-4 md:px-12">
         <button
           className="bg-blue-600 hover:bg-blue-700 rounded-md text-white px-4 py-2 cursor-pointer"
           onClick={() => {
@@ -29,7 +29,11 @@ const SelectionDetail = ({ skip }) => {
               <h2 className="text-lg md:text-3xl text-white">
                 {size} Yard Skip
               </h2>
-              <p className={`text-md ${theme === "dark" ? "text-gray-400" : "text-gray-700"}`}>
+              <p
+                className={`text-md ${
+                  theme === "dark" ? "text-gray-400" : "text-gray-700"
+                }`}
+              >
                 {hire_period_days} days hire
               </p>
             </div>
@@ -42,18 +46,27 @@ const SelectionDetail = ({ skip }) => {
                   maximumFractionDigits: 2,
                 })}
               </h2>
-              <p className={`text-md ${theme === "dark" ? "text-gray-400" : "text-gray-700"}`}>includes VAT</p>
+              <p
+                className={`text-md ${
+                  theme === "dark" ? "text-gray-400" : "text-gray-700"
+                }`}
+              >
+                includes VAT
+              </p>
             </div>
           </div>
         </div>
 
         <button
           className="bg-blue-600 hover:bg-blue-700 rounded-md text-white px-4 py-2 cursor-pointer"
-          onClick={() => setSelectSkipComplete(true)}
+          onClick={
+            () => setSelectSkipComplete(true)
+            // App then navigates to the next page
+          }
         >
           Next
         </button>
-      </section>
+      </div>
     </div>
   );
 };
