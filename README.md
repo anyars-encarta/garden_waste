@@ -14,6 +14,7 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -38,10 +39,13 @@
 - [📝 License](#license)
 
 <!-- INTRO -->
+
 # 📖 Garden Waste<a name="about-project"></a>
+
 > Garden Waste is a redesigned Skip selection page from [REM Waste website](https://wewantwaste.co.uk/). It allows the user select from a variety of displayed Skips showcasing their images, sizes, permissions, and pricing. It is part of the process for booking to rent a Skip. Data used in the app is by the kindest courtesy of [REM Waste](https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft).
 
 ## 🛠 Development Structure <a name="structure"></a>
+
 1. The app starts with a single SelectSkip.jsx page which is rendered through the App.jsx.
 2. The progress is in a separate Progress.jsx component, also rendered through the App.jsx. The progress component is static and doesnt move during scrolling.
 3. I fetched the data in the SelectSkip.jsx file, mapped through them, and rendered each Skip using a SkipCard.jsx component.
@@ -54,10 +58,12 @@
 10. I added a theme toggle above the progress indicator to switch between light and dark modes.
 11. The page is mobile responsive.
 12. Hovering over cards tilt them upwards and they move down when the cursor leaves them.
-13. Selected Cards remain tilted upwards until they are deselcted.
-14. I tried my best to keep in mind clean, maintainable react code, responsiveness, and UI/UX improvements.
+13. Hovering over an image on a card enlarges the image for a better view.
+14. Selected Cards remain tilted upwards until they are deselcted.
+15. I tried my best to keep in mind clean, maintainable react code, responsiveness, and UI/UX improvements.
 
 ## 🛠 Built With <a name="built-with"></a>
+
 1. React
 2. Taiwind CSS
 
@@ -79,7 +85,7 @@
 > - Select Skips.
 > - Selected Skips are stored in local storage and stay when the page is refreshed.
 > - Track progress
-> - Next button saves the selected skip and moves to the next page. 
+> - Next button saves the selected skip and moves to the next page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,13 +102,14 @@ LIVE DEMO
 ## 💻 Getting Started <a name="getting-started"></a>
 
 > To get a local copy of the project, use this link:
-> 
+
 ```sh
 cd garden_waste
 https://github.com/anyars-encarta/garden_waste.git
 ```
 
 <!-- SETUP -->
+
 ### Setup
 
 To setup this project, run this command:
@@ -110,6 +117,7 @@ To setup this project, run this command:
 ```sh
 npm install
 ```
+
 ### Prerequisites
 
 1. A Browser (Preferably Google Chrome)
@@ -118,6 +126,7 @@ npm install
 4. Git
 
 <!-- INSTALL -->
+
 ### Install
 
 Install this project with Iroko.
@@ -135,6 +144,7 @@ npm run dev
 ### Deployment
 
 You can deploy this project using:
+
 > 1. GitHub Pages
 > 2. Vercel
 > 3. Netlify
@@ -143,6 +153,7 @@ You can deploy this project using:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
+
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Anyars Yussif**
@@ -150,7 +161,6 @@ You can deploy this project using:
 - GitHub: [@anyars-encarta](https://github.com/anyars-encarta)
 - Twitter: [@anyarsencarta](https://twitter.com/anyarsencarta)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/anyars-yussif/)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,6 +173,7 @@ You can deploy this project using:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTION -->
+
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
@@ -178,6 +189,7 @@ Contributions, issues, and feature requests are welcome!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
+
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > Special credit to [REM Waste](https://wewantwaste.co.uk/) for giving me the opportunity to rebuild their page.
@@ -185,6 +197,7 @@ Contributions, issues, and feature requests are welcome!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQS -->
+
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
 - **How were the React and Linters utilised?**
