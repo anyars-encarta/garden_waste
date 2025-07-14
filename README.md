@@ -44,7 +44,7 @@
 
 > Garden Waste is a redesigned Skip selection page from [REM Waste website](https://wewantwaste.co.uk/). It allows the user select from a variety of displayed Skips showcasing their images, sizes, permissions, and pricing. It is part of the process for booking to rent a Skip. Data used in the app is by the kindest courtesy of [REM Waste](https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft).
 
-Data used
+Data
 
 ## 🛠 Development Structure <a name="structure"></a>
 
