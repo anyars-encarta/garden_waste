@@ -62,8 +62,6 @@
 14. Selected Cards remain tilted upwards until they are deselcted.
 15. I tried my best to keep in mind clean, maintainable react code, responsiveness, and UI/UX improvements.
 
-Data
-
 ## 🛠 Built With <a name="built-with"></a>
 
 1. React
