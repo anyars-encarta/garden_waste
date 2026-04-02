@@ -60,7 +60,7 @@
 12. Hovering over cards tilt them upwards and they move down when the cursor leaves them.
 13. Hovering over an image on a card enlarges the image for a better view.
 14. Selected Cards remain tilted upwards until they are deselcted.
-15. I tried my best to keep in mind clean, maintainable react code, responsiveness, and UI/UX improvements.
+15. I tried my best to keep in mind clean, maintainable react code.
 
 ## 🛠 Built With <a name="built-with"></a>
 
