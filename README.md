@@ -61,7 +61,7 @@
 13. Hovering over an image on a card enlarges the image for a better view.
 14. Selected Cards remain tilted upwards until they are deselcted.
 15. I tried my best to keep in mind clean, maintainable react code.
-16. More features to be added soon.
+16. More features to be added later.
 
 ## 🛠 Built With <a name="built-with"></a>
 
